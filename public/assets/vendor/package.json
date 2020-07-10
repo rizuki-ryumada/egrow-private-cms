@@ -1,0 +1,20 @@
+{
+  "name": "egrow-private-cms",
+  "version": "0.0.1",
+  "description": "cms for egrow private",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cms",
+    "codeigniter",
+    "adminlte",
+    "mvc"
+  ],
+  "author": "rizuki-ryumada, mock1ng",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "admin-lte": "^3.0.5"
+  }
+}
