@@ -5,7 +5,8 @@ class Admin extends _backend {
 
     public function index()
     {
-        
+        // template
+        $this->load->view('template');
     }
 
 }

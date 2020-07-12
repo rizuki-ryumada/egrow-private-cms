@@ -15,17 +15,13 @@ class _backend extends MY_Controller {
         parent::__construct();
 
         // load library
-        $this->load->library('session');
+        $this->load->library(['session', 'ion_auth']);
 
         // load model
         $this->load->model('_general_m');
 
-        // other function
-        $this->is_logged();
-    }
-
-    public function is_logged(){
-        if(!$this->session->userdata('user')){ // cek apa user sudah login
+        // Login Checker
+        if(!$this->ion_auth->logged_in()){
             redirect('epLogin');
         }
     }

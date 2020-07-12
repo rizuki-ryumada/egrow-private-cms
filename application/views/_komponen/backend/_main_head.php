@@ -13,12 +13,8 @@
 <!-- overlay scrollbar -->
 <link rel="stylesheet" href="<?= base_url('assets/vendor/node_modules/overlayscrollbars/css/OverlayScrollbars.min.css'); ?>">
 <!-- admin lte FRAMEWORK STYLES -->
-<link rel="stylesheet" href="<?= base_url('assets/vendor/node_modules/admin-lte/dist/css/adminlte.min.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/backend/adminlte.css'); ?>">
 
 <!-- font and default settings -->
 <link rel="stylesheet" href="<?= base_url('assets/fonts/font-face.css'); ?>">
-
-<!-- custom login styles -->
-<link rel="stylesheet" href="<?= base_url('assets/css/backend/login_styles.css'); ?>">
-
 <!-- /HEAD -->

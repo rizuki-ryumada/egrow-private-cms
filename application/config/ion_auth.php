@@ -39,9 +39,9 @@ $config['database_group_name'] = '';
 | Database table names.
 */
 $config['tables']['users']           = 'users';
-$config['tables']['groups']          = 'groups';
+$config['tables']['groups']          = 'user_groups';
 $config['tables']['users_groups']    = 'users_groups';
-$config['tables']['login_attempts']  = 'login_attempts';
+$config['tables']['login_attempts']  = 'user_login_attempts';
 
 /*
  | Users table column and Group table column you want to join WITH.
@@ -101,7 +101,7 @@ $config['join']['groups'] = 'group_id';
  | For more information, check the password_hash function help: http://php.net/manual/en/function.password-hash.php
  |
  */
-$config['hash_method']				= 'bcrypt';	// bcrypt or argon2
+$config['hash_method']				= 'argon2';	// bcrypt or argon2
 $config['bcrypt_default_cost']		= 10;		// Set cost according to your server benchmark - but no lower than 10 (default PHP value)
 $config['bcrypt_admin_cost']		= 12;		// Cost for user in admin group
 $config['argon2_default_params']	= [
@@ -134,7 +134,7 @@ $config['site_title']                 = "Example.com";       // Site Title, exam
 $config['admin_email']                = "admin@example.com"; // Admin Email, admin@example.com
 $config['default_group']              = 'members';           // Default group, use name
 $config['admin_group']                = 'admin';             // Default administrators group, use name
-$config['identity']                   = 'email';             /* You can use any unique column in your table as identity column.
+$config['identity']                   = 'username';             /* You can use any unique column in your table as identity column.
 															    The values in this column, alongside password, will be used for login purposes
 															    IMPORTANT: If you are changing it from the default (email),
 															    		   update the UNIQUE constraint in your DB */
@@ -146,7 +146,7 @@ $config['user_expire']                = 86500;               // How long to reme
 $config['user_extend_on_login']       = FALSE;               // Extend the users cookies every time they auto-login
 $config['track_login_attempts']       = TRUE;                // Track the number of failed login attempts for each user or ip.
 $config['track_login_ip_address']     = TRUE;                // Track login attempts by IP Address, if FALSE will track based on identity. (Default: TRUE)
-$config['maximum_login_attempts']     = 3;                   // The maximum number of failed login attempts.
+$config['maximum_login_attempts']     = 5;                   // The maximum number of failed login attempts.
 $config['lockout_time']               = 600;                 /* The number of seconds to lockout an account due to exceeded attempts
 																You should not use a value below 60 (1 minute) */
 $config['forgot_password_expiration'] = 1800;                /* The number of seconds after which a forgot password request will expire. If set to 0, forgot password requests will not expire.
@@ -164,7 +164,7 @@ $config['recheck_timer']              = 0;                   /* The number of se
  |
  | Please customize
  */
-$config['session_hash'] = '6583d6c4f205998ecacc9f51b68a2a2e44ea0006';
+$config['session_hash'] = 'n9[33289cjkal;9&(*OP2:livn3p9629oq_)';
 
 /*
  | -------------------------------------------------------------------------

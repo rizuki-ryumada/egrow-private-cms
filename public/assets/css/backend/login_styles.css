@@ -1,3 +1,4 @@
-/* html body.login-page{
-    background-image: url('../../img/backend/login/background.png');
-} */
+html body.login-page{
+    /* background-image: url('../../img/backend/login/background.png'); */
+    background-color: #fff9c4;
+}

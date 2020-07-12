@@ -1,4 +1,28 @@
 /* -------------------------------------------------------------------------- */
+/*                            Default font                                    */
+/* -------------------------------------------------------------------------- */
+
+/* how to use it */
+body{
+    font-family: "opensans-regular";
+}
+.font-weight-semibold{
+    font-family: 'opensans-semibold';
+}
+.font-weight-bold{
+    font-family: 'opensans-bold'
+}
+.font-weight-bolder{
+    font-family: 'opensans-extrabold';
+
+}
+.font-weight-light{
+    font-family: 'opensans-light';
+}
+.font-italic{
+    font-family: 'opensans-italic';
+}
+/* -------------------------------------------------------------------------- */
 /*                              Declare the font                              */
 /* -------------------------------------------------------------------------- */
 
@@ -113,13 +137,4 @@
         url('./poppins/poppins-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            Default font                                    */
-/* -------------------------------------------------------------------------- */
-
-/* how to use it */
-body{
-    font-family: "opensans-regular";
 }
