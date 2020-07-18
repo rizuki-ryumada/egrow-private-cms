@@ -147,13 +147,17 @@
     </nav><!-- /Navbar -->
     
     <!-- SIDEBAR -->
-    <aside class="main-sidebar sidebar-dark-warning elevation-4">
+    <aside class="main-sidebar sidebar-light-orange elevation-4">
         <!-- Brand Logo -->
-        <a href="#" class="brand-link logo-switch">
-            <!-- TODO buat logo kecil Egrow -->
-            <img src="<?= base_url('assets/img/_main/favicon.svg'); ?>" alt="E" class="brand-image-xl logo-xs">
-            <img src="<?= base_url('assets/img/_main/egrow_text_logo-stroked.svg'); ?>" alt="Egrow Private" class="brand-image-xs logo-xl" style="left: 12px">
+        <a href="../../index3.html" class="brand-link">
+            <img src="<?= base_url('assets/img/_main/favicon.svg'); ?>" alt="E" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <img class="brand-text font-weight-light" src="<?= base_url('assets/img/_main/egrow_text_logo.svg'); ?>" alt="Egrow Private" style="height: 30px;">
+            <!-- <span class="brand-text font-weight-light"><img src="<?= base_url('assets/img/_main/egrow_text_logo.svg'); ?>" alt="Egrow Private"></span> -->
         </a>
+        <!-- <a href="#" class="brand-link logo-switch">
+            <img src="<?= base_url('assets/img/_main/favicon.svg'); ?>" alt="E" class="brand-image-xl logo-xs">
+            <img src="<?= base_url('assets/img/_main/egrow_text_logo.svg'); ?>" alt="Egrow Private" class="brand-image-xs logo-xl" style="left: 12px">
+        </a> -->
         
         <!-- Sidebar -->
         <div class="sidebar">
@@ -161,7 +165,7 @@
             
             <!-- Sidebar Menu -->
             <nav class="mt-3">
-                <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-flat" data-widget="treeview" role="menu">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu">
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -234,10 +238,10 @@
                         <h1 class="m-0 text-dark">Starter Page</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
+                        <!-- <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active">Starter Page</li>
-                        </ol>
+                        </ol> -->
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -310,7 +314,7 @@
     <!-- CONTROL BAR -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
-    </aside>
+    </aside><!-- /Control Bar -->
 
     <!-- FOOTER -->
     <footer class="main-footer">
