@@ -4,11 +4,13 @@
 <!-- bootstrap 4 bundle -->
 <script src="<?= base_url('assets/vendor/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
 <!-- overlayScrollbars -->
-<script src="<?= base_url('assets/vendor/node_modules/admin-lte/dist/js/adminlte.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/node_modules/overlayscrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
 <!-- adminLTE js -->
 <script src="<?= base_url('assets/vendor/node_modules/admin-lte/dist/js/adminlte.min.js'); ?>"></script>
 <!-- sweet alert 2 -->
 <script src="<?= base_url('assets/vendor/node_modules/sweetalert2/dist/sweetalert2.all.min.js'); ?>"></script>
+<!-- toastr -->
+<script src="<?= base_url('assets/vendor/node_modules/toastr/build/toastr.min.js'); ?>"></script>
 
 <!-- FIXME remove on production -->
 <!-- demo Adminlte -->
@@ -39,7 +41,7 @@
     "hideMethod": "fadeOut"
     }
     
-    <?php if($this->session->flashdata('notif_msg')): ?>
+    <?php if(!empty($this->session->flashdata('notif_msg'))): ?>
         toastr["<?= $this->session->flashdata('notif_msg')['icon']; ?>"]("<?= $this->session->flashdata('notif_msg')['msg']; ?>")
     <?php endif; ?>
 
