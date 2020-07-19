@@ -16,7 +16,44 @@
         <!-- Sidebar Menu -->
         <nav class="mt-3">
             <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu">
-                <li class="nav-item has-treeview menu-open">
+                <?php foreach($menu as $v): ?>
+                    <!-- ambil submenu -->
+                    <?php $menu_sub = $this->_general_m->getAll('*', 'user_menu_sub', array('id_menu' => $v['id_menu'])); ?>
+                    <?php if(empty($menu_sub)): ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url($v['url']); ?>" class="nav-link <?php if($this->uri->segment(1) == $v['url']){echo('active');} ?>">
+                                <i class="nav-icon <?= $v['icon']; ?>"></i>
+                                <p><?= $v['title']; ?></p>
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item has-treeview <?php if($this->uri->segment(1) == $v['url']){echo('menu-open');} ?>">
+                            <a href="#" class="nav-link <?php if($this->uri->segment(1) == $v['url']){echo('active');} ?>">
+                                <i class="nav-icon fas <?= $v['icon']; ?>"></i>
+                                <p><?= $v['title']; ?><i class="right fas fa-angle-left"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <?php foreach($menu_sub as $value): ?>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url($value['url']); ?>" class="nav-link 
+                                        <?php if($this->uri->segment(1).'/'.$this->uri->segment(2) == $value['url']){echo('active');} ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p><?= $value['title']; ?></p>
+                                        </a>
+                                    </li>
+                                <?php endforeach;?>
+                                <!-- <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inactive Page</p>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach;?>
+
+                <!-- <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -70,7 +107,7 @@
                             <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav><!-- /.sidebar-menu -->
     </div><!-- /.sidebar -->

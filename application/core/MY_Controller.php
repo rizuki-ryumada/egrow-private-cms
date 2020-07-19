@@ -11,6 +11,7 @@ class MY_Controller extends CI_Controller {
 
 // backend controller
 class _backend extends MY_Controller {
+    protected $menu = array();
     public function __construct(){
         parent::__construct();
 
@@ -24,6 +25,13 @@ class _backend extends MY_Controller {
         if(!$this->ion_auth->logged_in()){
             redirect('epLogin');
         }
+
+        // Get Menu
+        $this->menu = $this->getMenu();
+    }
+
+    function getMenu() {
+        return $this->_general_m->getAll('*', 'user_menu', array());
     }
 }
 
