@@ -11,8 +11,12 @@ class Laporan extends _backend {
     {
         // main data
         $data['menu'] = $this->menu;
+        $data['user'] = $this->user;
         $data['page_title'] = $this->title['laporan'];
         $data['load_view'] = 'settings/usermgmt-settings.php';
+
+        echo(json_encode($data['user']));
+        exit;
 
         // additional and custom styles script
         $data['additional_styles'] = ''; // for plugins styles on php files

@@ -1,3 +1,13 @@
+/* -------------------------------------------------------------------------- */
+/*                           CUSTOM ADMIN LTE STYLES                          */
+/* -------------------------------------------------------------------------- */
+/* brand logo on sidebar */
 a.brand-link.logo-switch img.brand-image-xs.logo-xl{
     width: 90%;;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu {
+    width: unset;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
 }
