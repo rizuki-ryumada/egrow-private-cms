@@ -16,13 +16,13 @@
         </li>
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <img src="<?= base_url('assets/img/_main/favicon.svg'); ?>" class="user-image img-circle elevation-2" alt="User Image" width="160px" height="160px">
+                <img src="<?= base_url('assets/img/_main/user.svg'); ?>" class="user-image img-circle elevation-2" alt="User Image" width="160px" height="160px">
                 <span class="d-none d-md-inline"><?= $user['first_name']; ?> <i class="fa fa-angle-down ml-2"></i></span>
             </a>
             <ul class="dropdown-menu" style="left: inherit; right: 0px;">
-                <li><a href="#" class="dropdown-item"><i class="fa fa-user mr-1"></i> My Profile</a></li>
+                <li><a href="<?= base_url('settings/profile'); ?>" class="dropdown-item"><i class="fa fa-user mr-1"></i> My Profile</a></li>
                 
-                <li class="dropdown-divider"></li>
+                <!-- <li class="dropdown-divider"></li> -->
                 
                 <li><a href="#" class="dropdown-item text-danger"><i class="fa fa-sign-out-alt mr-1"></i> Logout</a></li>
             </ul>

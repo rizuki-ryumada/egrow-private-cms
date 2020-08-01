@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | EP Admin</title>
+<title><?= $page_title; ?> | EP Admin</title>
 
 <!-- favicon -->
 <link rel="shortcut icon" type="image/svg+xml" href="<?= base_url('assets/img/_main/favicon.svg'); ?>"/>

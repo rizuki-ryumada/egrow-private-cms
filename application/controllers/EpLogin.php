@@ -5,6 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class EpLogin extends CI_Controller {
     
     public $data = array();
+    protected $title = array(
+        'login' => 'Login'
+    );
 
     public function __construct()
     {
@@ -41,6 +44,7 @@ class EpLogin extends CI_Controller {
         if($this->form_validation->run() == FALSE){ // tampilkan halaman login
             // main data
             $data['custom_login'] = array('login_styles');
+            $data['page_title'] = $this->title['login'];
 
             $this->load->view('backend/login_v', $data);
         } else {
@@ -128,20 +132,20 @@ class EpLogin extends CI_Controller {
 
 
 
-    public function testHash() {
-        $password_string = 'qwertyuiop';
-        $password = password_hash($password_string, PASSWORD_ARGON2I);
+    // public function testHash() {
+    //     $password_string = 'qwertyuiop';
+    //     $password = password_hash($password_string, PASSWORD_ARGON2I);
 
-        print_r($password);
+    //     print_r($password);
 
-        echo"<br/>";
-        echo"<br/>";
-        if(password_verify($password_string, $password)){
-            echo"password is valid";
-        } else {
-            echo"password is invalid";
-        }
-    }
+    //     echo"<br/>";
+    //     echo"<br/>";
+    //     if(password_verify($password_string, $password)){
+    //         echo"password is valid";
+    //     } else {
+    //         echo"password is invalid";
+    //     }
+    // }
 
 }
 

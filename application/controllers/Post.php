@@ -11,6 +11,7 @@ class Post extends _backend {
     {
         // main data
         $data['menu'] = $this->menu;
+        $data['user'] = $this->user;
         $data['page_title'] = $this->title['post'];
         $data['load_view'] = 'settings/usermgmt-settings.php';
 
