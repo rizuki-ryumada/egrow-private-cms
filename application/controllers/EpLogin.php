@@ -75,7 +75,14 @@ class EpLogin extends CI_Controller {
                 redirect('epLogin');
             }
         }
+    }
 
+    public function logmeout(){
+        // log the user out
+        $this->ion_auth->logout();
+        
+        // bawa ke site page
+        redirect('/');
     }
 
     // public function logmein(){

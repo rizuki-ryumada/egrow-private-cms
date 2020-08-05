@@ -8,6 +8,8 @@ a.brand-link.logo-switch img.brand-image-xs.logo-xl{
 
 .navbar-nav > .user-menu > .dropdown-menu {
     width: unset;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    padding: .5rem;
+
 }

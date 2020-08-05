@@ -76,7 +76,7 @@
     <!-- custom script -->
     <?php if(!empty($custom_script)): ?>
         <?php foreach($custom_script as $v): ?>
-            <?php $this->load->view($v); ?>
+            <?php $this->load->view('_komponen/backend/'.$v); ?>
         <?php endforeach;?>
     <?php endif; ?>
 

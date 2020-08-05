@@ -20,7 +20,7 @@ class Pengajar extends _backend {
         $data['custom_styles'] = ''; // custom css files
         $data['custom_script'] = ''; // custom script with php files
 
-        $this->load->view('_main_v', $data);
+        $this->load->view('backend/_backend_v', $data);
     }
 
 }

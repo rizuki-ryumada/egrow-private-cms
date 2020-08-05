@@ -24,7 +24,7 @@
                 
                 <!-- <li class="dropdown-divider"></li> -->
                 
-                <li><a href="#" class="dropdown-item text-danger"><i class="fa fa-sign-out-alt mr-1"></i> Logout</a></li>
+                <li><a href="<?= base_url('epLogin/logmeout'); ?>" class="dropdown-item text-danger"><i class="fa fa-sign-out-alt mr-1"></i> Logout</a></li>
             </ul>
         </li>
         <!-- profile -->

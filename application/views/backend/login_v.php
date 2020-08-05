@@ -90,6 +90,8 @@
     <!-- MAIN SCRIPT -->
     <?php $this->load->view('_komponen/backend/_main_script'); ?>
     <!-- Validation Script -->
+    <script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/jquery.validate.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/additional-methods.min.js'); ?>"></script>
     <script>
         $(document).ready(() => {
             $('#loginForm').validate({

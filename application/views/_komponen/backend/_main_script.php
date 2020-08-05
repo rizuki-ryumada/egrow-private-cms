@@ -17,8 +17,8 @@
 <script src="<?= base_url('assets/vendor/node_modules/admin-lte/dist/js/demo.js'); ?>"></script>
 
 <!-- Jquery Validate -->
-<script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/jquery.validate.min.js'); ?>"></script>
-<script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/additional-methods.min.js'); ?>"></script>
+<!-- <script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/jquery.validate.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/node_modules/jquery-validation/dist/additional-methods.min.js'); ?>"></script> -->
 <!-- /SCRIPT -->
 
 <!-- General popup message using Swal -->
@@ -40,10 +40,16 @@
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
     }
-    
-    <?php if(!empty($this->session->flashdata('notif_msg'))): ?>
-        toastr["<?= $this->session->flashdata('notif_msg')['icon']; ?>"]("<?= $this->session->flashdata('notif_msg')['msg']; ?>")
+
+    <?php if(!empty($this->session->userdata('notif_msg'))): ?>
+        <?php if(!empty($this->session->userdata('notif_msg')['title'])): ?>
+            toastr["<?= $this->session->userdata('notif_msg')['icon']; ?>"]("<?= $this->session->userdata('notif_msg')['msg']; ?>", "<?= $this->session->userdata('notif_msg')['title']; ?>");
+        <?php else: ?>
+            toastr["<?= $this->session->userdata('notif_msg')['icon']; ?>"]("<?= $this->session->userdata('notif_msg')['msg']; ?>");
+        <?php endif; ?>        
     <?php endif; ?>
+    // hapus notif msg
+    <?php $this->session->unset_userdata('notif_msg'); ?>
 
     $(document).ready(function(){
         // $("body").overlayScrollbars({ 
@@ -54,12 +60,12 @@
         }); // set overlay sidebar scrollbar color to dark
     });
 
-    <?php if(!empty($this->session->flashdata('swal_msg'))): ?>
+    <?php if(!empty($this->session->userdata('swal_msg'))): ?>
         $(document).ready(() => {
             Swal.fire({
-                title: '<?= $this->session->flashdata('msg')['title']; ?>',
-                icon: '<?= $this->session->flashdata('msg')['icon']; ?>',
-                html: '<?= $this->session->flashdata('msg')['msg']; ?>',
+                title: '<?= $this->session->userdata('swal_msg')['title']; ?>',
+                icon: '<?= $this->session->userdata('swal_msg')['icon']; ?>',
+                html: '<?= $this->session->userdata('swal_msg')['msg']; ?>',
                 showCloseButton: false,
                 showCancelButton: false,
                 focusConfirm: true,
@@ -69,4 +75,6 @@
             });
         });
     <?php endif; ?>
+    <?php $this->session->unset_userdata('swal_msg'); ?>
+
 </script>
