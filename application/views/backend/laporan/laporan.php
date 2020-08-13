@@ -4,10 +4,10 @@
             <div class="card-body">
                 <table class="table table-striped table-bordered">
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Active</th>
+                        <th>Tanggal</th>
+                        <th>Materi</th>
+                        <th>Sesi</th>
+                        <th>Details</th>
                     </tr>
                 </table>
             </div>

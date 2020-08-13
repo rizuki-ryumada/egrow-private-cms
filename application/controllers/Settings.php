@@ -21,6 +21,12 @@ class Settings extends _backend {
 
         // print_r(($data['users']));
         // exit;
+
+        // data user
+        $data['users'] = $this->ion_auth->select('first_name, id, username, last_name, email, active, phone')->users()->result_array();
+        foreach ($data['users'] as $k => $user){
+			$data['users'][$k]['groups'] = $this->ion_auth->get_users_groups($user['id'])->result_array();
+        }
             
         // main data
         $data['menu']       = $this->menu;
